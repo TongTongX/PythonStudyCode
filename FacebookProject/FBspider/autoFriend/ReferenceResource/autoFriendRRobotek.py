@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+	#!/usr/bin/env python
 
 import time
 HEADER = '\033[95m' # colours
@@ -45,6 +45,7 @@ while(True) :	# the script
 			psswrd = raw_input("Your facebook password: ")	# facebook password
 	
 			driver.get("https://www.facebook.com")	# go to facebook.com
+			driver.maximize_window()
 
 			email = driver.find_element_by_name("email")	# search email textbox
 			email.send_keys(nme)	# enter email / username = nme
@@ -55,7 +56,7 @@ while(True) :	# the script
 			password.send_keys(psswrd)	# enter password
 			password.send_keys(Keys.RETURN)	# RETURN
 			try:	# try to find Home-button and click it, it is only possible if logged in! So, test if logged in.
-				driver.find_element_by_id('u_0_e').click()	# find Home-button and click it
+				driver.find_element_by_id('u_0_2').click()	# find Home-button and click it
 				cycle = False; # if succeded, not cycle
 				break; # break out of the cycle
 			except NoSuchElementException: # if password and/or username are incorrect

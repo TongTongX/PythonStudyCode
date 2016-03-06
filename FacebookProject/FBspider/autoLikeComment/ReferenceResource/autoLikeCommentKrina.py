@@ -19,11 +19,11 @@ developers.facebook.com->Tools and Support->GraphAPI Explorer
 
 import facebook
 #import re
-token = "CAACEdEose0cBAHQ8pLQpHZCaEzAAJ0ZAEDkcxd7NJub5uZCXcZCDBBtTwPYmyteEUQFJBSO8BpQs9d9fPS47Epxwcm5ZAM41855xkeW7Jk6bx7DYJuq2VrB8gVfmZAgJUX6HW5sp6KZCPqTAk8LkWiYq0rgpICLRe45c5Qu6y7FP84LTsoUdFxiZAe5ZAasmqZCsylJLpi59axAFpdDtpiHsif"
+token = ""
 graph = facebook.GraphAPI(token)
 #pages = ['rahuldravid']
-#profile = graph.get_object("100006358157877")
-profile = graph.get_object("100006319206561")
+#profile = graph.get_object("")
+profile = graph.get_object("")
 posts = graph.get_connections(profile['id'],"posts") # this line would connect us to the facebook profile
 for post in posts['data']:
         #print "code running"

@@ -30,9 +30,9 @@ driver.maximize_window()
  
 # Facebook login
 inputEmail = driver.find_element_by_id("email")
-inputEmail.send_keys("alanzhaoxutong@hotmail.com")
+inputEmail.send_keys("email")
 inputPass = driver.find_element_by_id("pass")
-inputPass.send_keys("cyc19960628face")
+inputPass.send_keys("password")
 inputPass.submit()
  
 #driver.find_element_by_id("findFriendsNav").click()
