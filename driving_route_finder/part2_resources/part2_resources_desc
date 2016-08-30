@@ -1,0 +1,9 @@
+Part 2 Resources
+
+The following files are included in this post.
+
+client_soln_part2_base.zip - Implements many of the Arduino-side features you will need to get started for part 1. Also contains a wiring description.
+
+textserial.zip - Files for serial port communication in Python (updated on Feb 14, 2015).
+
+yeg-lcd.zip - Contains the maps of Edmonton that you should place on the SD card.

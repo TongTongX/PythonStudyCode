@@ -1,0 +1,27 @@
+Alan(Xutong) Zhao
+Yue Ma
+	
+Acknowledgement: - I used graph.py and minheap.py that our profs developed in class.
+		- I essentially used the read_city_graph() that I wrote for a previous
+		weekly exercise.
+		- I applied the same idea of Dijkstra to construct least_cost_path() 
+		function, as well as the idea of handshake process, which my partner
+		and I wrote for a CMPUT 274 assignment, to construct the communication
+		portion of this program. 
+
+MinHeap Note: Nodes are key-value pairs, stored in an array. The first element of 
+	the pair is the key, the second is the value. However, in order to decide 
+	the position of a node on the tree, the KEY is compared with other keys.
+	I initially set the node in ((prev, curr), dist) format where (prev, curr) 
+	is the key and dist is the value, but it is the value of prev that determines
+	the relative position. For instance, ((2,3),0) is below ((1,3),1), i.e. the 
+	min is ((1,3),1). Therefore, I changed the format to ((dist, prev, curr), None)
+	where (dist, prev, curr) is the key with no value paired with it. 
+
+We implemented a driving route finder (like Google Maps) for the Edmonton area. The application will involve a combination of the Arduino (as client) and a python app (as server) on a desktop computer. The user will be able to scroll around with a joystick on a zoomable map of Edmonton and select a start and end point for their route. The Arduino client will communicate these points to the python server, which has all of the street information for Edmonton. The server application finds the shortest path (by distance along the path) and returns the waypoints of this path to the Arduino client. The Arduino will then display the path as lines overlaid on the original map. The user can then repeatedly query new points via the Arduino to receive new routes. For part 1, our app communicates via stdin and stdout.
+
+For part 1 we implemented the following portions:
+1. Routines for building the graph by reading the provided text file.
+2. A cost function for computing edge weights.
+3. A routine for computing least cost paths efficiently.
+4. A python route finding server that accepts route finding requests and provides paths through the specified protocol.  For part 1, your app will communicate via stdin and stdout.  
